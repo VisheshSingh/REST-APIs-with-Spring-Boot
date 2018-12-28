@@ -2,4 +2,5 @@ org\learn\springboot\WelcomeRestController.class
 org\learn\springboot\Book.class
 org\learn\springboot\OurSpringBootApplication.class
 org\learn\springboot\BookRepository.class
+org\learn\springboot\SwaggerConfiguration.class
 org\learn\springboot\BookRestController.class

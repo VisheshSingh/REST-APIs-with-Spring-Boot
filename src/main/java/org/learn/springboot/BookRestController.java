@@ -15,18 +15,22 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping("/api")
 public class BookRestController {
 	
 	Map<Integer, Book> BOOKMAP = BookRepository.BOOKMAP;
 	
+	@ApiOperation(value="Returns a collection of Books")
 	@GetMapping(value="/books", produces=MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ResponseEntity<Collection<Book>> getAllBooks() {
 		
 		return new ResponseEntity<Collection<Book>>(BOOKMAP.values(), HttpStatus.OK);
 	}
 	
+	@ApiOperation(value="Returns a single book by id")
 	@GetMapping(value="/books/{id}", produces=MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ResponseEntity<Book> getBook(@PathVariable Integer id) {
 		
@@ -35,6 +39,7 @@ public class BookRestController {
 		
 	}
 	
+	@ApiOperation(value="Create a new book in collection, returns void")
 	@PostMapping(value="/books", produces=MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ResponseEntity<Void> addBook(@RequestBody Book book) {
 		
@@ -43,6 +48,7 @@ public class BookRestController {
 		
 	}
 	
+	@ApiOperation(value="Modifies an existing book in collection and return that book")
 	@PutMapping(value="/books", produces=MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ResponseEntity<Book> editBook(@RequestBody Book book) {
 		
@@ -55,6 +61,7 @@ public class BookRestController {
 		
 	}
 	
+	@ApiOperation(value="Deletes a book by id")
 	@DeleteMapping(value="/books/{id}", produces=MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public ResponseEntity<Void> deleteBook(@PathVariable Integer id) {
 		
