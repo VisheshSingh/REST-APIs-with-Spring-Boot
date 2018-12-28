@@ -1,0 +1,18 @@
+
+[[_definitions]]
+== Definitions
+
+[[_book]]
+=== Book
+
+[options="header", cols=".^3a,.^4a"]
+|===
+|Name|Schema
+|**id** +
+__optional__|integer (int32)
+|**name** +
+__optional__|string
+|===
+
+
+

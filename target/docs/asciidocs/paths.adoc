@@ -1,0 +1,231 @@
+
+[[_paths]]
+== Paths
+
+[[_addbookusingpost]]
+=== Create a new book in collection, returns void
+....
+POST /api/books
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**book** +
+__required__|book|<<_book,Book>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|No Content
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `application/json;charset=UTF-8`
+
+
+==== Tags
+
+* book-rest-controller
+
+
+[[_getallbooksusingget]]
+=== Returns a collection of Books
+....
+GET /api/books
+....
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|< <<_book,Book>> > array
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Produces
+
+* `application/json;charset=UTF-8`
+
+
+==== Tags
+
+* book-rest-controller
+
+
+[[_editbookusingput]]
+=== Modifies an existing book in collection and return that book
+....
+PUT /api/books
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Body**|**book** +
+__required__|book|<<_book,Book>>
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_book,Book>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `application/json;charset=UTF-8`
+
+
+==== Tags
+
+* book-rest-controller
+
+
+[[_getbookusingget]]
+=== Returns a single book by id
+....
+GET /api/books/{id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_book,Book>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Produces
+
+* `application/json;charset=UTF-8`
+
+
+==== Tags
+
+* book-rest-controller
+
+
+[[_deletebookusingdelete]]
+=== Deletes a book by id
+....
+DELETE /api/books/{id}
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|Type|Name|Description|Schema
+|**Path**|**id** +
+__required__|id|integer (int32)
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|No Content
+|**204**|No Content|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|===
+
+
+==== Produces
+
+* `application/json;charset=UTF-8`
+
+
+==== Tags
+
+* book-rest-controller
+
+
+[[_welcomeusingget]]
+=== welcome
+....
+GET /api/welcome
+....
+
+
+==== Responses
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|string
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Produces
+
+* `application/json;charset=UTF-8`
+
+
+==== Tags
+
+* welcome-rest-controller
+
+
+

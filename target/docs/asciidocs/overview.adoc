@@ -1,0 +1,39 @@
+= REST API - Books resource
+
+
+[[_overview]]
+== Overview
+Spring Boot based REST API
+
+
+=== Version information
+[%hardbreaks]
+__Version__ : 1.0.0
+
+
+=== Contact information
+[%hardbreaks]
+__Contact__ : V-boy
+__Contact Email__ : v-boy@springboot.org
+
+
+=== License information
+[%hardbreaks]
+__License__ : GNU
+__License URL__ : http://www.gnu.org
+__Terms of service__ : For terms and conditions visit the docs
+
+
+=== URI scheme
+[%hardbreaks]
+__Host__ : localhost:8089
+__BasePath__ : /
+
+
+=== Tags
+
+* book-rest-controller : Book Rest Controller
+* welcome-rest-controller : Welcome Rest Controller
+
+
+

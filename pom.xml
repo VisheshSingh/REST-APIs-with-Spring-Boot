@@ -7,6 +7,22 @@
 	<packaging>war</packaging>
 	<name>RESTful API with Spring boot</name>
 
+	<pluginRepositories>
+		<pluginRepository>
+			<id>jcenter-snapshots</id>
+			<name>jcenter</name>
+			<url>http://oss.jfrog.org/artifactory/oss-snapshot-local/</url>
+		</pluginRepository>
+		<pluginRepository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>jcenter-releases</id>
+			<name>jcenter</name>
+			<url>http://jcenter.bintray.com</url>
+		</pluginRepository>
+	</pluginRepositories>
+
 	<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
 	<dependencies>
 		<dependency>
@@ -60,6 +76,19 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>io.github.swagger2markup</groupId>
+				<artifactId>swagger2markup-maven-plugin</artifactId>
+				<version>1.3.7</version>
+				<configuration>
+					<swaggerInput>http://localhost:8089/v2/api-docs</swaggerInput>
+					<outputDir>${project.build.directory}/docs/asciidocs</outputDir>
+					<config>
+						<swagger2markup.markupLanguage>ASCIIDOC</swagger2markup.markupLanguage>
+					</config>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
